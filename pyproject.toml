@@ -1,0 +1,16 @@
+[project]
+name = "cdn-traffic-analytics"
+version = "1.0.0"
+description = "A delivery metrics API for cache efficiency, origin traffic, bandwidth, and cost analysis."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<0.116",
+  "uvicorn[standard]>=0.30,<0.31",
+  "pydantic>=2.8,<3"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "httpx>=0.27,<0.28"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

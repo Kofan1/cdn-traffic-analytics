@@ -1,0 +1,13 @@
+services:
+  analytics:
+    build: .
+    ports:
+      - "8001:8001"
+    environment:
+      CDN_ANALYTICS_DB: /app/data/cdn.db
+    volumes:
+      - cdn-data:/app/data
+
+volumes:
+  cdn-data:
+
